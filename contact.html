@@ -59,11 +59,10 @@
                             </ul>
                         </nav>
                         <div class="header__nav__social">
-                            <a href="#"><i class="fa fa-facebook"></i></a>
+                            <a href="https://www.facebook.com/ujjaval.patel.3053?mibextid=LQQJ4d"><i class="fa fa-facebook"></i></a>
                             <a href="#"><i class="fa fa-twitter"></i></a>
-                            <a href="#"><i class="fa fa-instagram"></i></a>
-                            <a href="#"><i class="fa fa-youtube-play"></i></a>
-                            <a href="#"><i class="fa fa-linkedin"></i></a>
+                            <a href="https://www.instagram.com/ujjvl_patel_3053/profilecard/?igsh=dThodHZtcW1tYzd4"><i class="fa fa-instagram"></i></a>
+                            <a href="https://www.linkedin.com/in/ujjaval-patel-6b408a1bb?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app"><i class="fa fa-linkedin"></i></a>
 
                         </div>
                     </div>
@@ -174,11 +173,10 @@
                     </div>
                     <div class="col-lg-6 col-md-6">
                         <div class="footer__top__social">
-                            <a href="#"><i class="fa fa-facebook"></i></a>
+                            <a href="https://www.facebook.com/ujjaval.patel.3053?mibextid=LQQJ4d"><i class="fa fa-facebook"></i></a>
                             <a href="#"><i class="fa fa-twitter"></i></a>
-                            <a href="#"><i class="fa fa-instagram"></i></a>
-                            <a href="#"><i class="fa fa-youtube-play"></i></a>
-                            <a href="#"><i class="fa fa-linkedin"></i></a>
+                            <a href="https://www.instagram.com/ujjvl_patel_3053/profilecard/?igsh=dThodHZtcW1tYzd4"><i class="fa fa-instagram"></i></a>
+                            <a href="https://www.linkedin.com/in/ujjaval-patel-6b408a1bb?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app"><i class="fa fa-linkedin"></i></a>
 
                         </div>
                     </div>
@@ -186,46 +184,53 @@
             </div>
             <div class="footer__option">
                 <div class="row">
-                    <div class="col-lg-4 col-md-6">
+                    <div class="col-lg-4 col-md-6 col-sm-6">
                         <div class="footer__option__item">
                             <h5>About us</h5>
-                            <p>Formed in 2006 by Matt Hobbs and Cael Jones, Videoprah is an award-winning, full-service
-                                production company specializing.</p>
-                            <a href="#" class="read__more">Read more <span class="arrow_right"></span></a>
+                            <p>Hi, I'm Ujjaval, I am a dedicated and passionate software developer .....</p>
+                            <a href="about.html" class="read__more">Read more <span class="arrow_right"></span></a>
                         </div>
                     </div>
-                    <div class="col-lg-2 col-md-3">
+                    <div class="col-lg-2 col-md-3 col-sm-3">
                         <div class="footer__option__item">
-                            <h5>Who we are</h5>
-                            <ul>
-                                <li><a href="#">Team</a></li>
-                                <li><a href="#">Carrers</a></li>
-                                <li><a href="#">Contact us</a></li>
-                                <li><a href="#">Locations</a></li>
+                            <!-- <h5>Who we are</h5> -->
+                            <ul>         
+                                <li><a href="contact.html"><span><h5>Contact us</h5></span><span class="arrow_right"></span></a></li>                          
                             </ul>
                         </div>
                     </div>
-                    <div class="col-lg-2 col-md-3">
-                        <div class="footer__option__item">
-                            <h5>Our work</h5>
-                            <ul>
-                                <li><a href="#">Feature</a></li>
-                                <li><a href="#">Latest</a></li>
-                                <li><a href="#">Browse Archive</a></li>
-                                <li><a href="#">Video for web</a></li>
-                            </ul>
-                        </div>
-                    </div>
+                    
                     <div class="col-lg-4 col-md-12">
                         <div class="footer__option__item">
-                            <h5>Newsletter</h5>
-                            <p>Videoprah is an award-winning, full-service production company specializing.</p>
-                            <form action="#">
-                                <input type="text" placeholder="Email">
-                                <button type="submit"><i class="fa fa-send"></i></button>
-                            </form>
+                            <h5>Current Date & Time</h5>
+                            <p id="liveDateTime"></p>
                         </div>
                     </div>
+                    
+                    <script>
+                        function updateDateTime() {
+                            const currentTime = new Date();
+                    
+                            const day = String(currentTime.getDate()).padStart(2, '0');
+                            const month = String(currentTime.getMonth() + 1).padStart(2, '0'); // Months are 0-indexed
+                            const year = currentTime.getFullYear();
+                    
+                            const hours = String(currentTime.getHours()).padStart(2, '0');
+                            const minutes = String(currentTime.getMinutes()).padStart(2, '0');
+                            const seconds = String(currentTime.getSeconds()).padStart(2, '0');
+                    
+                            const formattedDate = `${day}-${month}-${year}`;
+                            const formattedTime = `${hours}:${minutes}:${seconds}`;
+                    
+                            document.getElementById('liveDateTime').innerText = `${formattedDate} ${formattedTime}`;
+                        }
+                    
+                        setInterval(updateDateTime, 1000); 
+                        updateDateTime(); 
+                    </script>
+                    
+                    
+                    
                 </div>
             </div>
             <div class="footer__copyright">
